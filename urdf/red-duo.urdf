@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="red-duo">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-3.14265529897627E-05 -3.14360193817975E-05 -0.00747198560551371"
+        rpy="0 0 0" />
+      <mass
+        value="500.7848347872755" />
+      <inertia
+        ixx="1.10813954791041"
+        ixy="-0.000376899769965095"
+        ixz="4.81998810237274E-05"
+        iyy="1.10813948971712"
+        iyz="4.82272878890223E-05"
+        izz="2.19353356930222" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left1_duo_link">
+    <inertial>
+      <origin
+        xyz="0 0 -0.021664"
+        rpy="0 0 0" />
+      <mass
+        value="0.98734" />
+      <inertia
+        ixx="0.00048811"
+        ixy="7.806E-22"
+        ixz="-2.3478E-20"
+        iyy="0.00048294"
+        iyz="7.3366E-21"
+        izz="0.00050034" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/left1_duo_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/left1_duo_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left1_duo_joint"
+    type="continuous">
+    <origin
+      xyz="0.25 0.25 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left1_duo_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left1_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 -0.00750000000000001 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.301003846122072" />
+      <inertia
+        ixx="7.52509615305181E-05"
+        ixy="2.4766950762574E-23"
+        ixz="-3.32761674174298E-21"
+        iyy="0.000139214278831459"
+        iyz="-3.44071143658477E-38"
+        izz="7.52509615305181E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/left1_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/left1_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left1_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.00750000000000001 -0.068"
+      rpy="0 0 0" />
+    <parent
+      link="left1_duo_link" />
+    <child
+      link="left1_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="left2_duo_link">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 0 -0.0216636085282422"
+        rpy="0 0 0" />
+      <mass
+        value="0.987341700597558" />
+      <inertia
+        ixx="0.000488110116737672"
+        ixy="-3.60986694113935E-22"
+        ixz="-2.25650656698762E-23"
+        iyy="0.000482944054230364"
+        iyz="-9.15154398088095E-21"
+        izz="0.000500343873334965" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/left2_duo_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/left2_duo_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left2_duo_joint"
+    type="continuous">
+    <origin
+      xyz="-0.25 0.25 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left2_duo_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left2_wheel_link">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -0.00750000000000001 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.301003846122072" />
+      <inertia
+        ixx="7.52509615305181E-05"
+        ixy="8.03156831872044E-22"
+        ixz="-2.58213152378951E-21"
+        iyy="0.000139214278831459"
+        iyz="-3.99749849570389E-39"
+        izz="7.52509615305182E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/left2_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/left2_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left2_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.00750000000000001 -0.068"
+      rpy="0 0 0" />
+    <parent
+      link="left2_duo_link" />
+    <child
+      link="left2_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right1_duo_link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 0 -0.0216636085282422"
+        rpy="0 0 0" />
+      <mass
+        value="0.987341700597558" />
+      <inertia
+        ixx="0.000488110116737672"
+        ixy="-9.09685387265232E-22"
+        ixz="2.25650656698761E-23"
+        iyy="0.000482944054230364"
+        iyz="3.06014308422724E-20"
+        izz="0.000500343873334965" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/right1_duo_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/right1_duo_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right1_duo_joint"
+    type="continuous">
+    <origin
+      xyz="0.25 -0.25 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right1_duo_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right1_wheel_link">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 0.0075 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.301003846122072" />
+      <inertia
+        ixx="7.5250961530518E-05"
+        ixy="-1.50960461790928E-22"
+        ixz="-3.37538157535652E-21"
+        iyy="0.000139214278831458"
+        iyz="-1.96240835243646E-38"
+        izz="7.5250961530518E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/right1_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/right1_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right1_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0075 -0.068"
+      rpy="0 0 0" />
+    <parent
+      link="right1_duo_link" />
+    <child
+      link="right1_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right2_duo_link">
+    <inertial>
+      <origin
+        xyz="5.5511E-17 0 -0.021664"
+        rpy="0 0 0" />
+      <mass
+        value="0.98734" />
+      <inertia
+        ixx="0.00048811"
+        ixy="9.7299E-22"
+        ixz="2.3478E-20"
+        iyy="0.00048294"
+        iyz="-1.6535E-20"
+        izz="0.00050034" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/right2_duo_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/right2_duo_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right2_duo_joint"
+    type="continuous">
+    <origin
+      xyz="-0.25 -0.25 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right2_duo_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right2_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0.0075 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.301003846122072" />
+      <inertia
+        ixx="7.5250961530518E-05"
+        ixy="1.70774022400987E-21"
+        ixz="-2.58154183448564E-21"
+        iyy="0.000139214278831458"
+        iyz="0"
+        izz="7.5250961530518E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/right2_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://red-duo/meshes/right2_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right2_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0075 -0.068"
+      rpy="0 0 0" />
+    <parent
+      link="right2_duo_link" />
+    <child
+      link="right2_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
