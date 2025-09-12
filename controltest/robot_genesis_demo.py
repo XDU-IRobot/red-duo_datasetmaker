@@ -26,7 +26,7 @@ plane = scene.add_entity(gs.morphs.Plane())
 
 # Add a robot to the scene  
 robot = scene.add_entity(
-    gs.morphs.URDF(file='urdf/red-duo.urdf')
+    gs.morphs.URDF(file='../urdf/red-duo-fixed.urdf')
 )
 
 scene.build()

@@ -28,7 +28,7 @@ scene = gs.Scene(
 
 # 添加地面和机器人
 plane = scene.add_entity(gs.morphs.Plane())
-robot = scene.add_entity(gs.morphs.URDF(file='urdf/red-duo.urdf'))
+robot = scene.add_entity(gs.morphs.URDF(file='../urdf/red-duo-fixed.urdf'))
 
 # 构建场景
 scene.build()

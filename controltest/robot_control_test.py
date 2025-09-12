@@ -25,7 +25,7 @@ scene = gs.Scene(
 )
 
 plane = scene.add_entity(gs.morphs.Plane())
-robot = scene.add_entity(gs.morphs.URDF(file='urdf/red-duo.urdf'))
+robot = scene.add_entity(gs.morphs.URDF(file='../urdf/red-duo-fixed.urdf'))
 scene.build()
 
 # 关节名称
@@ -66,7 +66,8 @@ for i in range(500):
     t = i * 0.02
     
     # 生成简单的轮子运动
-    wheel_angle = math.sin(t) * 10.0  # 正弦波运动
+    # wheel_angle = math.sin(t) * 10.0  # 正弦波运动
+    wheel_angle =t * 5.0  # 等速直线运动
     
     # 为轮子关节设置目标角度
     wheel_indices = [dofs_idx[1], dofs_idx[3], dofs_idx[5], dofs_idx[7]]  # 轮子关节
