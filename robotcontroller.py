@@ -9,7 +9,7 @@ print(f"机器人总DOF: {robot.n_dofs}")
 print(f"关节DOF索引: {dofs_idx}")
 print(f"舵机关节索引: {duo_joint_indices}")
 print(f"轮子关节索引: {wheel_joint_indices}")
-logger = Logger("./log/","rotate_traj.csv") # set the log file name
+logger = Logger("./log/","rotate_traj_001.csv") # set the log file name
 def posinitial(robot, duo_joint_indices, wheel_joint_indices):
     # 调整机器人初始位置（轻微抬高避免地面穿透）
     pos = robot.get_pos()
@@ -43,6 +43,7 @@ def forward_position(robot, duo_joint_indices, wheel_joint_indices,step):
             robot.control_dofs_position(target_pos)
         logger.log(i, robot)
         scene.step()
+    logger.plot_trajectory(show=True, save_as="./log/rotate_traj_001.png")
 def rotate_position(robot, duo_joint_indices, wheel_joint_indices, step):
     posinitial(robot, duo_joint_indices, wheel_joint_indices)
     #set joint buff
@@ -65,5 +66,5 @@ def rotate_position(robot, duo_joint_indices, wheel_joint_indices, step):
             robot.control_dofs_position(target_pos)
         scene.step()
 # control test
-forward_position(robot, duo_joint_indices, wheel_joint_indices, 1000)
+forward_position(robot, duo_joint_indices, wheel_joint_indices, 100)
 # rotate_position(robot, duo_joint_indices, wheel_joint_indices, 1000) #set the step

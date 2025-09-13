@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import csv
+import matplotlib.pyplot as plt
 class Logger:
     def __init__(self, log_dir, log_file):
         self.log_dir = log_dir
@@ -31,3 +32,21 @@ class Logger:
                 ori[0], ori[1], ori[2], ori[3],
                 joint_str
             ])
+    def plot_trajectory(self,show=True,save_as=None):
+        if not os.path.exists(self.file_path):
+            print("No log file found.")
+            return
+        pos_arr = np.array(self.positions)
+        fig = plt.figure()
+        ax = fig.add_subplot(111, projection='3d')
+        ax.plot(pos_arr[:,0], pos_arr[:,1], pos_arr[:,2], label="Trajectory", color="b")
+        ax.set_xlabel("X")
+        ax.set_ylabel("Y")
+        ax.set_zlabel("Z")
+        ax.legend()
+
+        if save_as:
+            plt.savefig(save_as)
+        if show:
+            plt.show()
+        plt.close()
